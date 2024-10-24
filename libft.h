@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:38:23 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/22 15:59:27 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/10/24 17:26:44 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,12 @@ size_t	ft_strlen(const char *s);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_atoi(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+//size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

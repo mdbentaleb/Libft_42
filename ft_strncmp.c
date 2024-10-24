@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 10:38:45 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/23 13:44:01 by moben-ta         ###   ########.fr       */
+/*   Created: 2024/10/24 09:41:48 by moben-ta          #+#    #+#             */
+/*   Updated: 2024/10/24 17:30:40 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') &&  i < n)
 	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-		}
-		i--;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
 	return (0);
 }
