@@ -6,8 +6,13 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 08:12:27 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/29 08:37:54 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/10/29 09:25:45 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strtrim(char const *s1, char const *set);
+#include "./libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	
+}
