@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 08:12:27 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/29 16:18:28 by moben-ta         ###   ########.fr       */
+/*   Created: 2024/10/29 15:57:39 by moben-ta          #+#    #+#             */
+/*   Updated: 2024/10/29 17:50:44 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
+#include <stdio.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	count_words(char *s)
 {
-	int start;
-	int end;
-	char *tmp;
+	int i;
+	int count;
 
-	start = 0;
-	while (s1[start] != '\0')
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		if (ft_strchr(set, s1[start]) == NULL)
-			break;
-		start++;
+		if (s[i] != ' ')
+		{
+			count++;
+			while (s[i] && s[i] != ' ')
+				i++;
+		}
+		else
+			i++;
 	}
-	end = ft_strlen(s1) - 1;
-	while (s1[end] > start)
-	{
-		if (ft_strrchr(set, s1[end]) == NULL)
-			break;
-		end--;
-	}
-	tmp = ft_substr(s1, start, end - start + 1);
-	tmp[end - start + 1] = '\0';
-	return (tmp);
+	return (count);
+}
+
+
+char	**ft_split(char const *s, char c)
+{
 }
