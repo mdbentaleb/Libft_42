@@ -6,13 +6,13 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:42:28 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/22 12:06:54 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:34:14 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isalnum( int c)
 {
 	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
