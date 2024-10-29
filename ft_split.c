@@ -6,14 +6,14 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:39 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/29 17:50:44 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/10/29 19:52:54 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 #include <stdio.h>
 
-int	count_words(char *s)
+int	count_words(char *s, char c)
 {
 	int i;
 	int count;
@@ -22,10 +22,10 @@ int	count_words(char *s)
 	count = 0;
 	while (s[i])
 	{
-		if (s[i] != ' ')
+		if (s[i] != c)
 		{
 			count++;
-			while (s[i] && s[i] != ' ')
+			while (s[i] && s[i] != c)
 				i++;
 		}
 		else
@@ -34,7 +34,19 @@ int	count_words(char *s)
 	return (count);
 }
 
-
+5
 char	**ft_split(char const *s, char c)
 {
+	char	**tmp;
+	int	i;
+	int	wdcount;
+
+	wdcount = count_words(s);
+	tmp = (char *)malloc(sizeof(char **) * wdcount + 1);
+	if (!tmp)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+	}
 }
