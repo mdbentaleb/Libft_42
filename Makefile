@@ -6,7 +6,7 @@
 #    By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 10:38:31 by moben-ta          #+#    #+#              #
-#    Updated: 2024/10/30 11:51:03 by moben-ta         ###   ########.fr        #
+#    Updated: 2024/10/30 12:07:40 by moben-ta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	  ft_memcmp.c ft_strnstr.c ft_memchr.c \
 	  ft_memcpy.c ft_substr.c ft_calloc.c \
 	  ft_strlcat.c ft_strjoin.c ft_strtrim.c \
-	  ft_strdup.c ft_split.c ft_putchar_fd.c
+	  ft_strdup.c ft_split.c ft_putchar_fd.c \
+	  ft_putstr_fd.c
 	  
 	  
 build:

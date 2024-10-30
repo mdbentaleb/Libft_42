@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 11:40:13 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/30 11:55:49 by moben-ta         ###   ########.fr       */
+/*   Created: 2024/10/30 11:57:21 by moben-ta          #+#    #+#             */
+/*   Updated: 2024/10/30 12:19:04 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	write (fd, &c, 1);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	write (fd, s, i);
 }
