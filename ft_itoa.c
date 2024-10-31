@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:35:10 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/31 10:06:21 by moben-ta         ###   ########.fr       */
+/*   Created: 2024/10/31 11:25:27 by moben-ta          #+#    #+#             */
+/*   Updated: 2024/10/31 11:38:27 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+static int	num_len(long nbr)
 {
-	long int	nb;
+	int	nbr_len;
 
-	nb = n;
-	if (nb < 0)
+	nbr_len = 0;
+	if (nbr < 0)
 	{
-		ft_putchar_fd ('-', fd);
-		nb *= -1;
+		nbr_len++;
+		nbr *= -1;
 	}
-	if (nb < 10)
-		ft_putchar_fd (n + '0', fd);
-	else
+	if (nbr == 0)
+		nbr_len++;
+	while (nbr != 0)
 	{
-		ft_putnbr_fd (nb / 10, fd);
-		ft_putchar_fd ((nb % 10) + '0', fd);
+		nbr = nbr / 10;
+		nbr_len++;
 	}
+	return (nbr_len);
+}
+
+
+char	*ft_itoa(int n)
+{
+	int	nbr_len;
+
+	nbr_len = num_len(n);
 }

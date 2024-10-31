@@ -6,13 +6,13 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:39 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/30 11:48:23 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:38:45 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
