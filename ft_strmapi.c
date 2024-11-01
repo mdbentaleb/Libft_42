@@ -6,11 +6,29 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:05:18 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/01 08:27:50 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:25:20 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+// #include "./libft.h"
+
+
+
+char	ft_toupper(unsigned int i, char c)
+{
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
+}
+
+
+size_t ft_strlen(const char *s) { // Add a simple implementation of ft_strlen
+    size_t len = 0;
+    while (s[len] != '\0') {
+        len++;
+    }
+    return len;
+}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -32,4 +50,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	tmp[i] = '\0';
 	return (tmp);
+}
+
+
+int main()
+{
+    char s[] = "hello";
+
+    printf("%s\n", ft_strmapi(s, ft_toupper));
 }
