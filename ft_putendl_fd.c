@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:21:02 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/30 12:45:46 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:41:38 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	 if (!s)
-	 	return ;
+	if (!s)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

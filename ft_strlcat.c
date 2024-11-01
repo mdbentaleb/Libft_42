@@ -6,10 +6,9 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:36:43 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/28 16:34:36 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:44:10 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "./libft.h"
 
@@ -21,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (dstsize == 0|| dstsize <= dst_len)
+	if (dstsize == 0 || dstsize <= dst_len)
 		return (src_len + dstsize);
 	i = 0;
 	while (src[i] != '\0' && dst_len + i < dstsize - 1)

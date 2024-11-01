@@ -6,16 +6,16 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:03:18 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/29 11:32:36 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:43:31 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	s1_len;
-	int	s2_len;
+	int		s1_len;
+	int		s2_len;
 	char	*tmp;
 
 	if (!s1 || !s2)

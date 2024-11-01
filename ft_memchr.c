@@ -6,16 +6,16 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:49:42 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/26 15:33:21 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:32:54 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-void 	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	unsigned char *tmp_s;
+	size_t			i;
+	unsigned char	*tmp_s;
 
 	tmp_s = (unsigned char *)s;
 	i = 0;

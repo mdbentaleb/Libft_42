@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:46:52 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/24 17:32:16 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:34:04 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *st1;
-	unsigned char *st2;
-	size_t	i;
+	unsigned char	*st1;
+	unsigned char	*st2;
+	size_t			i;
 
 	st1 = (unsigned char *)s1;
 	st2 = (unsigned char *)s2;
