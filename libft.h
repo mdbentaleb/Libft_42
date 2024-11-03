@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:38:23 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/01 12:23:39 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/02 12:34:42 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+t_list	*ft_lstnew(void *content);
+// void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
