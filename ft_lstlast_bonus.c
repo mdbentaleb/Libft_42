@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 09:25:11 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/03 13:35:38 by moben-ta         ###   ########.fr       */
+/*   Created: 2024/11/03 10:10:10 by moben-ta          #+#    #+#             */
+/*   Updated: 2024/11/03 13:35:21 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	len;
-
 	if (!lst)
-		return (0);
-	len = 0;
-	while (lst != NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		len++;
 		lst = lst->next;
 	}
-	return (len);
+	return (lst);
 }

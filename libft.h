@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:38:23 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/03 09:48:46 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:53:19 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 #endif
