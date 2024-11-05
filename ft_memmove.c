@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:29:51 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/05 13:47:30 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/05 15:56:59 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
-	size_t			i;
+	unsigned char		*tmp_dst;
+	unsigned const char	*tmp_src;
 
-	if (!dst || !src)
-		return (NULL);
+	if (!dst && !src)
+		return (0);
+	if (dst == src)
+		return (dst);
 	tmp_dst = (unsigned char *)dst;
 	tmp_src = (unsigned char *)src;
-	i = 0;
-	if (tmp_dst > tmp_src)
+	if (tmp_src < tmp_dst)
 	{
-		while (len-- > 0)
+		while (len--)
 			tmp_dst[len] = tmp_src[len];
 	}
 	else
-	{
-		while (i < len)
-		{
-			tmp_dst[i] = tmp_dst[i];
-			i++;
-		}
-	}
+		tmp_dst = ft_memcpy(tmp_dst, tmp_src, len);
 	return (dst);
 }

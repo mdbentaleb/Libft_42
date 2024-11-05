@@ -6,7 +6,7 @@
 #    By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 10:38:31 by moben-ta          #+#    #+#              #
-#    Updated: 2024/11/05 13:32:23 by moben-ta         ###   ########.fr        #
+#    Updated: 2024/11/05 15:06:27 by moben-ta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ ${NAME}: ${OBJ}
 	ar rcs ${NAME} ${OBJ}
 
 %.o:%.c libft.h
-	$(CC) -c $(CFLAGS) $< -o $@
+	$(CC) -c $(FLAGS) $< -o $@
 
 bonus: ${OBJBONUS}
 	ar rcs ${NAME} ${OBJBONUS}
