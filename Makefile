@@ -6,12 +6,14 @@
 #    By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 10:38:31 by moben-ta          #+#    #+#              #
-#    Updated: 2024/11/04 18:11:33 by moben-ta         ###   ########.fr        #
+#    Updated: 2024/11/05 09:28:13 by moben-ta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 FLAGS = -Wall -Wextra -Werror
+NAME = libft.a
+
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	  ft_isascii.c ft_isprint.c ft_strlen.c \
 	  ft_toupper.c ft_tolower.c ft_strchr.c \
@@ -22,15 +24,34 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	  ft_strlcat.c ft_strjoin.c ft_strtrim.c \
 	  ft_strdup.c ft_split.c ft_putchar_fd.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-	  ft_itoa.c ft_strmapi.c ft_striteri.c ft_lstnew_bonus.c \
-	  ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-	  ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
-	  ft_lstiter_bonus.c ft_lstmap_bonus.c
+	  ft_itoa.c ft_strmapi.c ft_striteri.c 
+
+SBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+		 ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+		 ft_lstclear_bonus.c ft_lstiter_bonus.c 
 	  
-build:
-		@${CC} ${FLAGS} ${SRC} test.c
-		@./a.out
-		@rm -rf a.out
+OBJ = $(SRC:.c=.o)
+OBJBONUS = $(SBONUS:.c=.o)
+
+
+OBONUS = ${SBONUS:.c=.o}
+all: ${NAME}
+
+${NAME}: ${OBJ}
+	ar rcs ${NAME} ${OBJ}
+
+%.o:%.c libft.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+bonus: ${OBONUS}
+	ar rcs ${NAME} ${OBONUS}
 
 clean:
-		@rm -rf *.txt
+	rm -rf ${OBJ} ${OBONUS}
+
+fclean:
+	rm -rf ${NAME} ${OBJ} ${OBONUS}
+
+re: fclean all
+
+.PHONY : all bonus clean fclean re
