@@ -6,7 +6,7 @@
 #    By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 10:38:31 by moben-ta          #+#    #+#              #
-#    Updated: 2024/11/05 09:40:22 by moben-ta         ###   ########.fr        #
+#    Updated: 2024/11/05 10:16:18 by moben-ta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,12 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	  ft_strlcat.c ft_strjoin.c ft_strtrim.c \
 	  ft_strdup.c ft_split.c ft_putchar_fd.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-	  ft_itoa.c ft_strmapi.c ft_striteri.c 
+	  ft_itoa.c ft_strmapi.c ft_striteri.c \
+	  ft_strlcpy.c
 
-SRCBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-		   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+SRCBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+		   ft_lstsize_bonus.c ft_lstlast_bonus.c \
+		   ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 		   ft_lstclear_bonus.c ft_lstiter_bonus.c
 	  
 OBJ = $(SRC:.c=.o)
