@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:39 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/31 11:38:45 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:37:24 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	**ft_split(char const *s, char c)
 	char	**tmp;
 
 	wd_count = count_words(s, c);
-	tmp = (char **)malloc(sizeof(char *) * (wd_count +1));
+	tmp = (char **)malloc(sizeof(char *) * (wd_count + 1));
 	if (!tmp)
 		return (NULL);
 	i = 0;
