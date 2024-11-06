@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:57:39 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/06 13:25:17 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:27:06 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static char	**my_free(char **tmp, int j)
 	return (NULL);
 }
 
-static char	**test(char **tmp, const char *s, char c, int wd_count)
+static char	**cp(char **tmp, const char *s, char c, int count_wd)
 {
 	int		i;
 	int		j;
@@ -51,12 +51,12 @@ static char	**test(char **tmp, const char *s, char c, int wd_count)
 
 	i = 0;
 	j = 0;
-	while (s[i] != '\0' && j < wd_count)
+	while (s[i] != '\0' && j < count_wd)
 	{
 		while (s[i] == c)
 			i++;
 		start = i;
-		while (s[i] != c)
+		while (s[i] != c && s[i] != '\0')
 			i++;
 		tmp[j] = ft_substr(s, start, i - start);
 		if (!tmp[j])
@@ -78,5 +78,5 @@ char	**ft_split(char const *s, char c)
 	tmp = (char **)malloc(sizeof(char *) * (count_wd + 1));
 	if (!tmp)
 		return (NULL);
-	return (test(tmp, s, c, count_wd));
+	return (cp(tmp, s, c, count_wd));
 }
