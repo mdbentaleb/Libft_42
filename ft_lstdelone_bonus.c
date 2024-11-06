@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 16:38:15 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/04 08:25:36 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:04:22 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst && !del)
+	if (!lst || !del)
 		return ;
 	del(lst->content);
 	free(lst);

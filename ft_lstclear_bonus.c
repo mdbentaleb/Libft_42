@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:01:59 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/06 10:02:07 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:04:51 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*tmp;
 	t_list	*cur;
 
-	if (!lst && !del)
+	if (!lst || !del)
 		return ;
 	cur = *lst;
 	while (cur != NULL)
