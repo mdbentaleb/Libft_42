@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:36:43 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/11/06 12:17:46 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/06 12:20:07 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	src_len = ft_strlen(src);
-	if (dst == NULL && dstsize == 0)
+	if (!dst && dstsize == 0)
 		return (src_len);
 	dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len)
