@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:35:10 by moben-ta          #+#    #+#             */
-/*   Updated: 2024/10/31 10:06:21 by moben-ta         ###   ########.fr       */
+/*   Updated: 2024/11/06 09:56:56 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 		nb *= -1;
 	}
 	if (nb < 10)
-		ft_putchar_fd (n + '0', fd);
+		ft_putchar_fd (nb + '0', fd);
 	else
 	{
 		ft_putnbr_fd (nb / 10, fd);
