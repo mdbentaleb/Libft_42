@@ -28,6 +28,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	while (s[start] != '\0' && i < len)
-		tmp[i++] = s[start++];
+	{
+		tmp[i] = s[start];
+		i++;
+		start++;
+	}
 	return (tmp);
 }
