@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	count_wd = count_words(s, c); 
+	count_wd = count_words(s, c);
 	tmp = (char **)malloc(sizeof(char *) * (count_wd + 1));
 	if (!tmp)
 		return (NULL);
