@@ -19,21 +19,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize != 0)
 	{
-		if (dstsize > ft_strlen(src))
+		while (src[i] && i < dstsize - 1)
 		{
-			while (i < ft_strlen(src))
-			{
-				dst[i] = src[i];
-				i++;
-			}
-		}
-		else
-		{
-			while (i < dstsize - 1)
-			{
-				dst[i] = src[i];
-				i++;
-			}
+			dst[i] = src[i];
+			i++;
 		}
 		dst[i] = '\0';
 	}
