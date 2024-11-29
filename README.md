@@ -16,7 +16,14 @@ It emphasizes low-level programming skills, memory management, and efficient cod
 
 ## 🛠️ Getting Started
 
-### 1. Clone the Repository
+### Prerequisites
+
+To get started, ensure you have the following installed:
+- A C compiler like `gcc` or `clang`
+- `make` for building the project
+- A UNIX-like operating system (Linux/macOS/WSL)
+
+### Clone the Repository
 ```bash
 git clone https://github.com/mdbentaleb/Libft_42_1337.git
 cd Libft_42_1337
