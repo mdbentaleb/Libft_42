@@ -25,5 +25,5 @@ To get started, ensure you have the following installed:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/mdbentaleb/Libft_42_1337.git
-cd Libft_42_1337
+git clone https://github.com/mdbentaleb/Libft_42.git
+cd Libft_42
